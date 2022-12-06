@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(#8b2dc1,#200132);
+    background: linear-gradient(#580f82,#200132);
 }
 .container{
     border: solid 1px rgb(255,255,255,0.2);
