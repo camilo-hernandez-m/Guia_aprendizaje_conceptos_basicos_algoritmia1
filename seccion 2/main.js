@@ -1,56 +1,47 @@
 addEventListener("DOMContentLoaded" ,(e)=>{
-    let form=document.querySelector('#input')
-    let cont =1   
-    form.addEventListener("submit",(e)=>{
-        e.preventDefault();       
+    numeroMayor()
+})
+const numeroMayor= () =>{
+    const n1 = document.getElementById("n1")
+    const n2 = document.getElementById("n2")
+    const n3 = document.getElementById("n3")
 
-        if(cont <=50){
-        let datosEntrada = Object.fromEntries(new FormData(e.target))
-        let taller1= Number(datosEntrada.taller_1)
-        let taller2= Number(datosEntrada.taller_2)
-        let quiz=Number(datosEntrada.quiz)
-        let parcial=Number(datosEntrada.parcial)
+    const submit = document.getElementById("submit")
+    
+    let nu1
+    let nu2
+    let nu3
 
-        let res= taller1+taller2
-        let res2= (res *15)/100
-
-        let res3=(quiz*15)/100
-
-        let res4=(parcial*70)/100
-
-        let res5= res2+res3+res4
-        if(res5>=70){
-          let tabla=document.querySelector("tbody")
-        tabla.insertAdjacentHTML("beforeend",`
-            <tr>
-            
-                <td> ${cont}</td>
-                <td> ${taller1}</td>
-                <td> ${taller2}</td>
-                <td> ${quiz}</td>
-                <td> ${parcial}</td>
-                <td> ${res5}</td>
-                <td> aprobado</td>
-                
-            </tr>
-            `)  
+    submit.addEventListener("click", e=>{
+        e.preventDefault()
+        nu1 = Number(n1.value)
+        nu2 = Number(n2.value)
+        nu3 = Number(n3.value)
+        if(nu == '' || nu2 == '' || nu3 == '') {
+            return alert("llene los espacios")}
+        else if(nu1 == nu2 && nu2 == nu3 && nu1 == nu3) 
+        {return alert("son iguales")}
+        
+        else if(nu1 > nu2 && nu1 > nu3){
+            tarjeta(nu1)
         }
-        else{
-            let tabla=document.querySelector("tbody")
-        tabla.insertAdjacentHTML("beforeend",`
-            <tr>
-            <td> ${cont}</td>
-            <td> ${taller1}</td>
-            <td> ${taller2}</td>
-            <td> ${quiz}</td>
-            <td> ${parcial}</td>
-            <td> ${res5}</td>
-            <td> reprobado</td>
-            
-        </tr>
-        `)
-    }
-         cont++
+        else if(nu2 > nu1 && nu2 > nu3){
+            tarjeta(nu2)
+        }
+        else if(nu3 > nu2 && nu3 > nu1){
+            tarjeta(nu3)
+        
         }
     })
-})
+}
+const tarjeta =(numero)=>{
+    const tarjeta = document.createElement("p")
+    tarjeta.textContent=`el numero es mayor ${numero}`
+    tarjeta.classList.add("tarjeta")
+
+    document.body.appendChild(tarjeta)
+
+    setTimeout(()=>{
+        document.body.removeChild(tarjeta)
+    },3000)
+}
