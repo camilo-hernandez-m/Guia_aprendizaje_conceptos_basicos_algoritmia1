@@ -1,37 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+
+table thead tr th {
+    border: solid black  ;
+    background-color: rgb(95, 0, 116);
+    font-size:20px;
+    padding: 10px 50px 10px;
+    font-size: 16px;
+    border-spacing: 10px;
+
 }
+
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(#8b2dc1,#0c0113);
-}
-.container{
-    border: solid 1px rgb(255,255,255,0.2);
-}
-table{
-    color: #fff;
-    font-size: 14px;
-    table-layout: fixed;
-    border-collapse: collapse;
-}
-thead{
-    background-color: rgb(150, 123, 87);
-}
-th{
-    padding: 20px 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-td{
-    padding: 15px ;
-    border-bottom: solid 1px  rgb(150, 123, 87); ;
-}
-tbody tr:hover{
-    background:  rgb(150, 123, 87);
+    background-color: rgba(229, 76, 229, 0.379);
 }
