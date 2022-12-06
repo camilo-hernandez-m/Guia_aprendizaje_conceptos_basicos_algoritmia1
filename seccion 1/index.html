@@ -9,149 +9,15 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>P</th>
-                    <th>Q</th>
-                    <th>(P∧Q)</th>
-                    <th>(P∨Q)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>V</td>
-                    <td>V</td>
-                    <td>V</td>
-                    <td>F</td>
-                </tr>
-                <tr>
-                    <td>V</td>
-                    <td>F</td>
-                    <td>F</td>
-                    <td>V</td>
-                </tr>
-                <tr>
-                    <td>F</td>
-                    <td>V</td>
-                    <td>F</td>
-                    <td>V</td>
-                </tr>
-                <tr>
-                    <td>F</td>
-                    <td>F</td>
-                    <td>F</td>
-                    <td>V</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <div class=" jumbotron jumbotron-fluid">
-        <!-- forma de presentar un título y un contenido en forma muy destacada en una página -->
-    </div class="container">
-    <!-- contenedores son unos recuadros o espacios rectangulares que pueden colocarse en cualquier parte de la página -->
-    <h1 class="dislpay-4"><strong>reglas de produccion</strong></h1>
-    <p class="lead text-justify">aqui pondremos si al final de todo los valores son verdaderos o falsos</p>
-    <!-- El texto se justifica añadiendo espacios entre caracteres -->
-    <a style="text-decoration: none;"><h3 class="text-danger"></h3></a>
-    </div>
-</div>
-<div class="container">
-<div class="float-left col-6">
-    <table class="table text-center border">
-        <thead class="thead-dark">
-            <tr>
-                <th colspan="3">conjuncion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="alert-success">
-                <td>P</td>
-                <td>Q</td>
-                <td>P ∧ Q </td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="conjuncion1" class="form-control">
-                        <option selected disabled="">seleccione</option>
-                        <option value="v">v</option>
-                        <option value="f">f</option>
-                    </select>
-                </td>
-                <td>
-                    <select id="conjuncion2" class="form-control">
-                        <option selected disabled="">seleccione</option>
-                        <option value="v">v</option>
-                        <option value="f">f</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" name="res" id="res" class="form-control text-center" readonly placeholder="resultado">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button class="btn btn-success" onclick="conjuncion()">calcular</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="float-left col-6">
-    <table class="table text-center border">
-        <thead class="thead-dark">
-            <tr>
-                <th colspan="3">disyuncion </th>
-                <!-- es una proposición compuesta que resulta de combinar dos simples por medio de la palabra -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="alert-primary">
-                <td>P</td>
-                <td>Q</td>
-                <td>P ∨ Q</td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="disyuncion1" class="form-control">
-                        <option selected disabled="">seleccione</option>
-                        <option value="v">v</option>
-                        <option value="f">f</option>
-                    </select>
-                </td>
-                <td>
-                    <select id="disyuncion2" class="form-control">
-                        <option selected disabled="">seleccione</option>
-                        <option value="v">v</option>
-                        <option value="f">f</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" name="res" id="res" class="form-control text-center" readonly placeholder="resultado">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button class="btn btn-success" onclick="disyuncion()">calcular</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
+    <label>Pesos</label>
+<input type="text" id="pesos"> 
+<br>
+<button type="button"  class="btn" onClick="cambio()">
+  convertir a dólar
+  </button>
+<br>
+<label>Dolares</label>
+<p type="text" id="resul" >
+</p>
 </body>
 </html>
