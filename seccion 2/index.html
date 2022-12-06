@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <form id="input">
+        <input type="number" placeholder="aqui el año" name="año">
+            <input type="submit" name="envia">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3"> Año</th>
+            </tr> 
+            <tr>
+                <td>año</td>
+                <td>año biciesto</td>
+                <td>año normal</td>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
 </body>
 </html>
