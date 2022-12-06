@@ -5,10 +5,10 @@ addEventListener("DOMContentLoaded" ,(e)=>{
         e.preventDefault();       
         if(cont <=50){
         let datosEntrada = Object.fromEntries(new FormData(e.target))
-        let observaciones= datosEntrada.observaciones
+            let observaciones= datosEntrada.observaciones
                 let tabla=document.querySelector("tbody");
             tabla.insertAdjacentHTML("beforeend",`
-            <tr>
+                <tr>
                     <td> ${cont}  </td>
                     <td> ${observaciones}  </td>
                 </tr>
