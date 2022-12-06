@@ -1,32 +1,37 @@
 *{
-    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-.btn{
-    background: #410370;
-    width: 100px;
-    height: 30px;
-    color:#fff;
-    border-radius: 3px;
-    margin: 10px 0;
-    border: solid 2px rgb(122, 63, 204);
-    font-size: 11px;
-    border-bottom: solid 2px #000000;
-  }
-  p{
-    color:black;
-    border-bottom:solid 2px rgb(0, 0, 0);
-    width:100px;
-    display: inline-block;
-  }
-  #pesos{
-    border-bottom:solid 2px rgb(186, 14, 14);
-    background:rgb(241, 239, 239);
-    box-shadow:none;
-    border:none;
-      border-bottom:solid 2px rgb(22, 1, 1);
-  }
-  #pesos:hover, #pesos:focus{
-    border:none;
-        border-bottom:solid 2px rgb(0, 0, 0);
-  }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#8b2dc1,#0c0113);
+}
+.container{
+    border: solid 1px rgb(255,255,255,0.2);
+}
+table{
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+thead{
+    background-color: rgb(150, 123, 87);
+}
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+td{
+    padding: 15px ;
+    border-bottom: solid 1px  rgb(150, 123, 87); ;
+}
+tbody tr:hover{
+    background:  rgb(150, 123, 87);
+}
